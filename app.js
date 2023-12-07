@@ -6,6 +6,7 @@ let listOfTodos = [];
 AddButton.addEventListener('click', function () {
   let TextReadByInputStored = textInput.value;
   listOfTodos.push(TextReadByInputStored);
+  Display()
 });
 
 function Display() {
@@ -30,9 +31,6 @@ function removeFunction(todoIndex) {
 
 function editFunction(todoIndex) {
   let editedTextFromPrompt = prompt('Enter the Text you want to add :');
-
-  console.log(editedTextFromPrompt);
-
   listOfTodos[todoIndex] = editedTextFromPrompt;
 
   Display();
